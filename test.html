@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Achievement Notifications</title>
+<style>
+  .achievement-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #222;
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-family: Arial, sans-serif;
+    max-width: 300px;
+  }
+  .achievement-notification.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .achievement-icon-box {
+    width: 48px;
+    height: 48px;
+    background: #444;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .achievement-icon-box img {
+    width: 32px;
+    height: 32px;
+  }
+  /* Hide notification initially */
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- Achievement Notification -->
+<div id="achievementNotification" class="achievement-notification hidden">
+  <div class="achievement-icon-box">
+    <img id="achievementIcon" src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png" alt="Achievement Icon" />
+  </div>
+  <div>
+    <h3 id="achievementTitle">Button Masher</h3>
+    <p id="achievementDesc">Click the same button 10 times.</p>
+  </div>
+</div>
+
+<!-- Example buttons -->
+<a href="#" class="btn">Button 1</a>
+<a href="#" class="btn2">Button 2</a>
+<input type="button" class="send-btn" value="Send" />
+
+<!-- Grass image -->
+<img id="grassImage" src="https://cdn-icons-png.flaticon.com/512/427/427735.png" alt="Grass" style="cursor:pointer; width:100px; margin-top:20px;" />
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('a.btn, a.btn2, input.send-btn');
+  let clickCounts = new Map();
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const currentCount = clickCounts.get(btn) || 0;
+      clickCounts.set(btn, currentCount + 1);
+
+      if (clickCounts.get(btn) === 10) {
+        showAchievementNotification(
+          'Button Masher',
+          'Click the same button 10 times.',
+          'https://cdn-icons-png.flaticon.com/512/1055/1055646.png'
+        );
+      }
+    });
+  });
+
+  // Grass click achievement
+  const grassImage = document.getElementById('grassImage');
+  let grassClicked = false;
+
+  grassImage.addEventListener('click', () => {
+    if (!grassClicked) {
+      grassClicked = true;
+      showAchievementNotification(
+        'Touch Some Grass',
+        "Wait that's not what I meant-",
+        'https://cdn-icons-png.flaticon.com/512/427/427735.png'
+      );
+    }
+  });
+});
+
+function showAchievementNotification(title, description, iconUrl) {
+  const notification = document.getElementById('achievementNotification');
+  const icon = document.getElementById('achievementIcon');
+  const titleElem = document.getElementById('achievementTitle');
+  const descElem = document.getElementById('achievementDesc');
+
+  icon.src = iconUrl;
+  icon.alt = title + ' Icon';
+  titleElem.textContent = title;
+  descElem.textContent = description;
+
+  notification.classList.remove('hidden');
+  notification.classList.add('show');
+
+  setTimeout(() => {
+    notification.classList.remove('show');
+    notification.classList.add('hidden');
+  }, 4000);
+}
+</script>
+
+</body>
+</html>

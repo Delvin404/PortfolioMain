@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delvin's Portfolio</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <!-- #CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- #box icon -->
+    
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <!--remox icon-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+
+<header>
+  <div class="logo-wrapper">
+    <!-- Logo -->
+<img src="img/logo/logo_1.png" alt="Logo" id="nav-logo" class="logo-img" />
+
+<!-- Achievement Notification -->
+<div id="achievementNotification" class="achievement-notification hidden">
+  <div class="achievement-icon-box">
+    <img id="achievementIcon" src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Achievement Icon" />
+  </div>
+  <div>
+    <h3 id="achievementTitle">Achievement Unlocked</h3>
+    <p id="achievementDesc">You did something!</p>
+  </div>
+</div>
+
+    <a href="#" class="logo">Delvin <span> Dev</span></a>
+  </div>
+
+  <div class="bx bx-menu" id="menu-icon"></div>
+  <ul class="navlist">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+  </ul>
+
+<div class="top-btnn">
+  <a href="#" id="achievementsBtn" class="button">
+    <span class="star star1"></span>
+  <span class="star star2"></span>
+  <span class="star star3"></span>
+    <span class="button__text" style="color: black;">Advancements</span>
+
+    <img src="img/blossom.png" alt="" class="button__cone">
+    <img src="img/cupcake.png" alt="" class="button__torus">
+    <img src="img/icosahedron.png" alt="" class="button__icosahedron">
+    <img src="img/trophy.png" alt="" class="button__sphere">
+  </a>
+</div>
+
+</header>
+<div class="screen-reveal">
+  <div class="panel left"></div>
+  <div class="panel right"></div>
+  <div class="logo-reveal"></div>
+</div>
+
+
+<div id="achievementsModal" class="achievements-modal hidden">
+  <div class="modal-content">
+    <h2>🏆 Advancements</h2>
+    <div class="achievement-cards">
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/joystick.png" alt="Button Masher" />
+        </div>
+        <h3>Button Masher</h3>
+        <p>Click the same button 10 times.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/fluency/48/alt-tab.png" alt="Alt Tab Champion" />
+        </div>
+        <h3>Alt+Tab Champion</h3>
+        <p>Leave the site and come back 5 times.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/speed.png" alt="Speedrunner" />
+        </div>
+        <h3>Speedrunner</h3>
+        <p>Navigate through all sections in under 10 seconds.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/sleeping.png" alt="AFK Legend" />
+        </div>
+        <h3>AFK Legend</h3>
+        <p>Stay idle on the page for more than 5 minutes.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/cancel.png" alt="Alt F4 Strategist" />
+        </div>
+        <h3>Alt F4 Strategist</h3>
+        <p>Try to close the tab but change your mind.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/fluency/48/search--v1.png" alt="Inspector Gadget" />
+        </div>
+        <h3>Inspector Gadget</h3>
+        <p>Hover over every clickable element.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/fluency/48/easter-egg.png" alt="Hidden Talent" />
+        </div>
+        <h3>Hidden Talent</h3>
+        <p>Discover a hidden or easter egg section.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/error-404.png" alt="404 Hunter" />
+        </div>
+        <h3>404 Hunter</h3>
+        <p>Try to visit a page that doesn’t exist.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/sherlock-holmes.png" alt="Sherlock Who?" />
+        </div>
+        <h3>Sherlock Who?</h3>
+        <p>Click on a really tiny hidden button.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/cat.png" alt="Cat Collector" />
+        </div>
+        <h3>Cat Collector</h3>
+        <p>Spot and click all hidden cat icons/stickers.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/touchscreen.png" alt="Fluffy Clicker" />
+        </div>
+        <h3>Fluffy Clicker</h3>
+        <p>Click a cute icon 100 times.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/sparkles.png" alt="Sparkle Overload" />
+        </div>
+        <h3>Sparkle Overload</h3>
+        <p>Hover on all the shiny things.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/open-box.png" alt="Inventory Full" />
+        </div>
+        <h3>Inventory Full</h3>
+        <p>Open every project card.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/ninja.png" alt="Stealth Mode" />
+        </div>
+        <h3>Stealth Mode</h3>
+        <p>Scroll to the bottom without clicking anything.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/keyboard.png" alt="Keyboard Warrior" />
+        </div>
+        <h3>Keyboard Warrior</h3>
+        <p>Press random keyboard keys on the page.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/grass.png" alt="Touched Grass" />
+        </div>
+        <h3>Touch some grass</h3>
+        <p>Wait that's not what I meant-</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/snail.png" alt="Certified Procrastinator" />
+        </div>
+        <h3>Certified Procrastinator</h3>
+        <p>Stay on the page for over 30 minutes.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/scroll.png" alt="Scroll Survivor" />
+        </div>
+        <h3>Scroll Survivor</h3>
+        <p>Scroll all the way up and down repeatedly.</p>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon-box">
+          <img src="https://img.icons8.com/color/48/question-mark.png" alt="Why Are You Still Here?" />
+        </div>
+        <h3>Why Are You Still Here?</h3>
+        <p>Unlock after 10+ minutes with no interaction.</p>
+      </div>
+    </div>
+    <button class="close-modal-btn" aria-label="Close modal">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#ff4500" viewBox="0 0 24 24" stroke="#ff4500" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- Achievement Notification -->
+<div id="achievementNotification" class="achievement-notification hidden">
+  <div class="achievement-icon-box">
+    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png" alt="Button Masher Icon" />
+  </div>
+  <div>
+    <h3>Button Masher</h3>
+    <p>Click the same button 10 times.</p>
+  </div>
+  
+</div>
+
+<audio id="achievementSound" src="img/advancement_sound.mp3" preload="auto"></audio>
+<audio id="destroySound" src="img/destroy.mp3" preload="auto"></audio>
+
+
+
+
+<section class="hero" id="home">
+<div class="main-content" data-aos="fade-in">
+  <h4>Hi, There</h4>
+<h1 class="main-heading static-text">I'm <span class="reveal-name comic-relief-bold">Ahsan Shaheer</span></h1>
+
+
+
+
+
+  <p>I’m a dedicated 2D game developer passionate about creating fun and engaging games. Skilled in game design, coding, and pixel art, I bring ideas to life using tools like Godot and Unity. Check out my portfolio to see games that combine smooth gameplay with creative visuals.</p>
+<div class="social-wrapper">
+  <a href="#" class="social-button">
+    <div class="icon"><i class="fab fa-facebook-f"></i></div>
+    <span>Facebook</span>
+  </a>
+  <a href="#" class="social-button">
+    <div class="icon"><i class="fab fa-instagram"></i></div>
+    <span>Instagram</span>
+  </a>
+  <a href="#" class="social-button">
+    <div class="icon"><i class="fab fa-twitter"></i></div>
+    <span>Twitter</span>
+  </a>
+  <a href="#" class="social-button">
+    <div class="icon"><i class="fab fa-youtube"></i></div>
+    <span>YouTube</span>
+  </a>
+  <a class="social-button" href="#" target="_blank">
+  <div class="icon"><i class="fab fa-github"></i></div>
+  <span>GitHub</span>
+</a>
+
+<a class="social-button" href="#" target="_blank">
+  <div class="icon"><i class="fab fa-linkedin-in"></i></div>
+  <span>LinkedIn</span>
+</a>
+
+</div>
+<div class="main-btn">
+  <a href="#" class="btn">Hire me</a>
+  <a href="assets/Resume.pdf" download class="btn btn2">Download Resume</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="about" id="about">
+  <div class="about-img" data-aos="zoom-in-down">
+    <img src="./img/about.jpg" alt="about image">
+  </div>
+  <div class="about-text" data-aos="zoom-in-up">
+    <h2>I am a Game <span>Developer</span><br> & Web Developer</h2>
+    <div class="exp-area">
+      <p class="exp">Experience: <span>5 Years</span></p>
+      <p class="exp">Speciality: <span>Game Developer, Web Developer</span></p>
+      <p class="exp">Address: <span>Punjab, Pakistan</span></p>
+      <p class="exp">Email: <span>develvin404@gmail.com</span></p>
+      <p class="exp">Phone: <span>+923411169676</span></p>
+      <p class="exp">Freelance: <span>Available</span></p>
+    </div>
+  </div>
+
+<!-- 8 Decorative elements -->
+  <img src="img/flower.png" class="decor flower-1" alt="flower">
+  <img src="img/flower.png" class="decor flower-2" alt="flower">
+  <img src="img/flower.png" class="decor flower-3" alt="flower">
+  <img src="img/flower.png" class="decor flower-4" alt="flower">
+  <img src="img/sparkle.png" class="decor sparkle sparkle-1" alt="sparkle">
+  <img src="img/sparkle.png" class="decor sparkle sparkle-2" alt="sparkle">
+  <img src="img/sparkle.png" class="decor sparkle sparkle-3" alt="sparkle">
+  <img src="img/sparkle.png" class="decor sparkle sparkle-4" alt="sparkle">
+</section>
+
+
+<section class="skills" id="skills">
+  <div class="center-text">
+    <h2>My <span>Skills</span></h2>
+  </div>
+
+  <!-- Programming Languages Section -->
+  <div class="sub-skills-section">
+    <h3>Programming Languages</h3>
+    <div class="skills-content">
+      <div class="skill-circle"><i class="fab fa-java"></i><span>Java</span></div>
+      <div class="skill-circle"><i class="fab fa-cuttlefish"></i><span>C</span></div>
+      <div class="skill-circle"><i class="fab fa-cuttlefish"></i><span>C++</span></div>
+      <div class="skill-circle"><i class="fas fa-code"></i><span>C#</span></div>
+      <div class="skill-circle"><i class="fab fa-js"></i><span>JavaScript</span></div>
+      <div class="skill-circle"><i class="fab fa-html5"></i><span>HTML5</span></div>
+      <div class="skill-circle"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+      <div class="skill-circle"><i class="fas fa-terminal"></i><span>GDScript</span></div>
+      <div class="skill-circle"><i class="fas fa-code-branch"></i><span>ShaderLab</span></div>
+      <div class="skill-circle"><i class="fas fa-project-diagram"></i><span>.NET</span></div>
+      <div class="skill-circle"><i class="fas fa-globe"></i><span>ASP.NET</span></div>
+      <div class="skill-circle"><i class="fab fa-react"></i><span>React</span></div>
+    </div>
+  </div>
+
+  <!-- Software Tools Section -->
+  <div class="sub-skills-section">
+    <h3>Software Tools</h3>
+    <div class="skills-content">
+      <div class="skill-circle"><i class="fas fa-gamepad"></i><span>Unity</span></div>
+      <div class="skill-circle"><i class="fas fa-cubes"></i><span>Unreal Engine</span></div>
+      <div class="skill-circle"><i class="fas fa-chess-board"></i><span>Godot</span></div>
+      <div class="skill-circle"><i class="fas fa-paint-brush"></i><span>Aseprite</span></div>
+      <div class="skill-circle"><i class="fas fa-vector-square"></i><span>Illustrator</span></div>
+      <div class="skill-circle"><i class="fas fa-image"></i><span>Photoshop</span></div>
+      <div class="skill-circle"><i class="fas fa-cube"></i><span>Blender</span></div>
+      <div class="skill-circle"><i class="fas fa-code"></i><span>Visual Studio</span></div>
+      <div class="skill-circle"><i class="fas fa-terminal"></i><span>VS Code</span></div>
+      <div class="skill-circle"><i class="fas fa-database"></i><span>SQLite</span></div>
+      <div class="skill-circle"><i class="fab fa-github"></i><span>GitHub</span></div>
+      <div class="skill-circle"><i class="fas fa-columns"></i><span>Trello</span></div>
+      <div class="skill-circle"><i class="fab fa-figma"></i><span>Figma</span></div>
+      <div class="skill-circle"><i class="fas fa-lightbulb"></i><span>Notion</span></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="achievements" id="achievements">
+  <div class="center-text">
+    <h2>My <span>Achievements</span></h2>
+  </div>
+
+  <div class="achievements-scroll-container">
+
+    <div class="achievement-box">
+      <i class="fas fa-code-branch"></i>
+      <h4>First GitHub Repository</h4>
+      <p>Created and pushed my first project code to GitHub, marking the start of version control practice.</p>
+    </div>
+
+    <div class="achievement-box">
+      <i class="fas fa-gamepad"></i>
+      <h4>Published First Game</h4>
+      <p>Designed and released my first indie game on itch.io, gaining initial player feedback.</p>
+    </div>
+
+    <div class="achievement-box">
+      <i class="fas fa-globe"></i>
+      <h4>Deployed Personal Website</h4>
+      <p>Built and deployed a personal portfolio site to showcase projects and skills online.</p>
+    </div>
+
+    <div class="achievement-box">
+      <i class="fas fa-trophy"></i>
+      <h4>Won Local Hackathon</h4>
+      <p>Collaborated with a team to win a 24-hour hackathon focused on web development challenges.</p>
+    </div>
+
+    <div class="achievement-box">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <h4>Completed Online Course</h4>
+      <p>Finished a comprehensive web development bootcamp, gaining hands-on experience.</p>
+    </div>
+
+    <div class="achievement-box">
+      <i class="fas fa-users"></i>
+      <h4>Collaborated on Team Project</h4>
+      <p>Worked with a remote team on a multiplayer game project, enhancing communication skills.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section class="showcase-gifs" id="showcase">
+  <div class="center-text" data-aos="fade-down">
+  </div>
+  <div class="gif-container" data-aos="zoom-in">
+    <img src="img/gif3.gif" alt="Game Demo" class="showcase-gif">
+    <img src="img/gif2.gif" alt="Game Demo" class="showcase-gif">
+    <img src="img/gif1.gif" alt="Game Demo" class="showcase-gif">
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="services" id="services">
+  <div class="center-text" data-aos="fade-down">
+    <h2>My <span>Services</span></h2>
+  </div>
+  <div class="services-content" data-aos="zoom-in-up">
+
+    <div class="box">
+      <img src="./img/s-1.svg" alt="2D Game Dev">
+      <h3>2D Game Development</h3>
+      <p>Custom 2D games built with clean code, engaging gameplay, and optimized performance using modern game engines.</p>
+    </div>
+
+    <div class="box">
+      <img src="./img/s-2.png" alt="UI/UX">
+      <h3>Game UI/UX Design</h3>
+      <p>Intuitive and appealing interfaces designed to enhance player experience and interaction in your 2D games.</p>
+    </div>
+
+    <div class="box">
+      <img src="./img/s-3.svg" alt="2D Assets">
+      <h3>2D Asset Creation</h3>
+      <p>Stylized sprites, tiles, and backgrounds tailored to your game’s theme using pixel art or vector graphics.</p>
+    </div>
+
+    <div class="box">
+      <img src="./img/s-4.svg" alt="Debugging">
+      <h3>Game Bug Fixing & Optimization</h3>
+      <p>Improve your existing game’s performance by fixing bugs, reducing lag, and enhancing overall stability.</p>
+    </div>
+
+    <div class="box">
+      <img src="./img/s-5.svg" alt="Web Dev">
+      <h3>Portfolio Websites</h3>
+      <p>Modern, responsive websites built to showcase your or your game's work with interactive and clean UI.</p>
+    </div>
+
+    <div class="box">
+      <img src="./img/s-6.svg" alt="Consultation">
+      <h3>Code Consultation</h3>
+      <p>Need help with logic, structure, or best practices? I provide one-on-one guidance to improve your project code.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="projects" id="projects">
+<div class="center-text" data-aos="fade-down">
+  <h2>This section is <span>under construction</span></h2>
+</div>
+
+<!-- <div class="Projects-content" data-aos="zoom-in-up">
+  <div class="row">
+    <img src="./img/port-1.jpg" alt="">
+    <div class="main-row">
+      <div class="row-text">
+        <h5>Website Design</h5>
+      </div>
+      <div class="row-icon">
+<i class="ri-github-fill"></i>
+      </div>
+    </div>
+    <h4>Website Development For Dark X</h4>
+  </div>
+  <div class="row">
+    <img src="./img/port-2.jpg" alt="">
+    <div class="main-row">
+      <div class="row-text">
+        <h5>Website Design</h5>
+      </div>
+      <div class="row-icon">
+<i class="ri-github-fill"></i>
+      </div>
+    </div>
+    <h4>Website Development For Dark X</h4>
+  </div>
+  <div class="row">
+    <img src="./img/port-3.jpg" alt="">
+    <div class="main-row">
+      <div class="row-text">
+        <h5>Website Design</h5>
+      </div>
+      <div class="row-icon">
+<i class="ri-github-fill"></i>
+      </div>
+    </div>
+    <h4>Website Development For Dark X</h4>
+  </div>
+  <div class="row">
+    <img src="./img/port-4.jpg" alt="">
+    <div class="main-row">
+      <div class="row-text">
+        <h5>Website Design</h5>
+      </div>
+      <div class="row-icon">
+<i class="ri-github-fill"></i>
+      </div>
+    </div>
+    <h4>Website Development For Dark X</h4>
+  </div>
+  <div class="row">
+    <img src="./img/port-5.jpg" alt="">
+    <div class="main-row">
+      <div class="row-text">
+        <h5>Website Design</h5>
+      </div>
+      <div class="row-icon">
+<i class="ri-github-fill"></i>
+      </div>
+    </div>
+    <h4>Website Development For Dark X</h4>
+  </div>
+  <div class="row">
+    <img src="./img/port-6.jpg" alt="">
+    <div class="main-row">
+      <div class="row-text">
+        <h5>Website Design</h5>
+      </div>
+      <div class="row-icon">
+<i class="ri-github-fill"></i>
+      </div>
+    </div>
+    <h4>Website Development For Dark X</h4>
+  </div>
+</div> -->
+
+</section>
+
+<section class="testimonials" id="testimonials">
+  <div class="center-text">
+    <h2>Client <span>Testimonials</span></h2>
+  </div>
+
+  <div class="swiper testimonials-slider">
+    <div class="swiper-wrapper">
+
+      <!-- Testimonial 1 -->
+      <div class="swiper-slide testimonial-box">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="James" />
+        <p>"Delvin transformed our prototype into a functioning game in record time. Highly dependable."</p>
+        <h4>James Holloway</h4>
+        <span>Lead Developer, Unity Studio</span>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="swiper-slide testimonial-box">
+        <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Marcus" />
+        <p>"His front-end work was sleek, performant, and well-structured. A reliable collaborator."</p>
+        <h4>Marcus Liu</h4>
+        <span>Frontend Engineer</span>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="swiper-slide testimonial-box">
+        <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="Sami" />
+        <p>"We needed our WebGL game optimized — he did it faster and cleaner than expected!"</p>
+        <h4>Sami Khan</h4>
+        <span>Game Publisher</span>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="swiper-slide testimonial-box">
+        <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Carlos" />
+        <p>"Excellent design sense with great communication. Nailed the UI/UX for our dashboard."</p>
+        <h4>Carlos Mendoza</h4>
+        <span>Project Manager</span>
+      </div>
+
+      <!-- Testimonial 5 -->
+      <div class="swiper-slide testimonial-box">
+        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Rick" />
+        <p>"I’ve worked with many devs, and Delvin’s code quality stands out the most. Will rehire."</p>
+        <h4>Rick Turner</h4>
+        <span>CTO, IndieGameTech</span>
+      </div>
+
+      <!-- Testimonial 6 -->
+      <div class="swiper-slide testimonial-box">
+        <img src="https://randomuser.me/api/portraits/men/53.jpg" alt="Junaid" />
+        <p>"Our portfolio platform got a complete makeover thanks to his modern, clean UI design."</p>
+        <h4>Junaid Abbas</h4>
+        <span>UI/UX Consultant</span>
+      </div>
+
+      <!-- Testimonial 7 -->
+      <div class="swiper-slide testimonial-box">
+        <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="Noah" />
+        <p>"Professional, punctual, and extremely talented in both web and game development."</p>
+        <h4>Noah Davis</h4>
+        <span>Full Stack Developer</span>
+      </div>
+
+      <!-- Testimonial 8 -->
+      <div class="swiper-slide testimonial-box">
+        <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Ali" />
+        <p>"We needed cross-platform UI done fast, and Delvin delivered flawlessly. Brilliant work!"</p>
+        <h4>Ali Raza</h4>
+        <span>App Developer</span>
+      </div>
+
+      <!-- Testimonial 9 -->
+      <div class="swiper-slide testimonial-box">
+        <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Kevin" />
+        <p>"Our team was impressed with his professionalism and smooth integration with our stack."</p>
+        <h4>Kevin Grant</h4>
+        <span>Backend Engineer</span>
+      </div>
+
+      <!-- Testimonial 10 -->
+      <div class="swiper-slide testimonial-box">
+        <img src="https://randomuser.me/api/portraits/men/90.jpg" alt="Zain" />
+        <p>"Delvin didn’t just meet expectations—he exceeded them. A top-tier developer."</p>
+        <h4>Zain Iqbal</h4>
+        <span>Technical Co-Founder</span>
+      </div>
+
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+<script>
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.6
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.testimonial-box').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+<section class="contact" id="contact">
+  <div class="contact-form" data-aos="zoom-in">
+    <audio id="mustafaAudio" src="img/scream.mp3" preload="auto"></audio>
+
+    <div class="contact-content">
+      <!-- Gogeta on the left -->
+      <div class="gogeta-wrapper" data-aos="zoom-in">
+        <img src="img/gogeta.png" alt="Gogeta Pixel Art" class="gogeta-img">
+        <img src="img/sparkle.png" class="sparkle sparkle-1" alt="Sparkle">
+        <img src="img/sparkle.png" class="sparkle sparkle-2" alt="Sparkle">
+        <img src="img/sparkle.png" class="sparkle sparkle-3" alt="Sparkle">
+        <img src="img/sparkle.png" class="sparkle sparkle-4" alt="Sparkle">
+        <img src="img/sparkle.png" class="sparkle sparkle-5" alt="Sparkle">
+        <img src="img/sparkle.png" class="sparkle sparkle-6" alt="Sparkle">
+        <img src="img/sparkle.png" class="sparkle sparkle-7" alt="Sparkle">
+        <img src="img/sparkle.png" class="sparkle sparkle-8" alt="Sparkle">
+      </div>
+
+      <!-- Form on the right -->
+      <form action="">
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Email Address..." required>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Write Message Here." required></textarea>
+        <input type="submit" value="Send Message" class="send-btn">
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>About</h3>
+      <p>I’m Ahsan Shaheer, a dedicated 2D game developer passionate about creating fun and engaging games. Skilled in game design, coding, and pixel art, I bring ideas to life using tools like Godot and Unity. Check out my portfolio to see games that combine smooth gameplay with creative visuals.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Me</h3>
+      <div class="social-icons">
+        <a href="#"><i class="ri-github-fill"></i></a>
+        <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+        <a href="#"><i class="ri-twitter-x-fill"></i></a>
+        <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 Designed and developed by Ahsan Shaheer. All rights reserved.</p>
+
+    <a href="#home" class="scroll-top">
+      <i class="ri-arrow-up-s-fill"></i>
+    </a>
+  </div>
+  <!-- Grass Button in Footer -->
+<button id="footerGrassButton" style="
+  all: unset;
+  position: absolute;
+  bottom: -30px;   /* Adjust vertically */
+  right: 120px;    /* Adjust horizontally */
+  z-index: 100;
+  cursor: pointer;
+">
+  <img id="footerGrassImage" src="img/grass.png" alt="Grass" style="width: 450px; height: auto;" />
+</button>
+
+</footer>
+
+<div class="cursor"></div>
+
+<div class="palette-container">
+  <div class="color-toggle" id="colorToggle">
+    <div class="color-option active" style="background: #ffb7c5;" data-color="#ffb7c5"></div>
+  </div>
+
+  <div class="color-palette" id="colorPalette">
+    <div class="column">
+      <div class="color-option" style="background: #ffb7c5;" data-color="#ffb7c5"></div>
+      <div class="color-option" style="background: #f3722c;" data-color="#f3722c"></div>
+      <div class="color-option" style="background: #43aa8b;" data-color="#43aa8b"></div>
+      <div class="color-option" style="background: #277da1;" data-color="#277da1"></div>
+      <div class="color-option" style="background: #7209b7;" data-color="#7209b7"></div>
+      <div class="color-option" style="background: #f9c74f;" data-color="#f9c74f"></div>
+    </div>
+    <button class="reset-colors" id="resetColors">Reset</button>
+  </div>
+</div>
+
+
+
+
+<script>
+  const cursor = document.querySelector('.cursor');
+
+  window.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+
+  // Select ALL interactive elements (buttons, links, cards, etc.)
+  const interactiveElements = document.querySelectorAll(
+    'a, button, .btn, .card, .box, input, textarea, label, select'
+  );
+
+  interactiveElements.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.classList.add('hover');
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.classList.remove('hover');
+    });
+  });
+</script>
+
+
+
+
+<script src="./script.js"></script>
+<script src="./notifications.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+offset:300,
+duration:1400,
+  });
+</script>
+
+</body>
+</html>
